@@ -6,6 +6,7 @@
   "author": "gui machiavelli",
   "license": "ISC",
   "dependencies": {
+    "lory.js": "^2.1.0",
     "node-reset-scss": "^1.0.1"
   },
   "devDependencies": {

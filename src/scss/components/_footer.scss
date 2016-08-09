@@ -1,0 +1,20 @@
+.site-footer {
+    padding: baselines(6) baselines(3);
+    background: colour(black)
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-network {
+    display: inline-block;
+
+    .i {
+        font-size: 44px;
+    }
+}
+
+.social-network__link {
+    color: #fff;
+}

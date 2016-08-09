@@ -295,3 +295,18 @@ a {
   padding: 14px 21px;
   font-size: 15px;
   color: #76797f; }
+
+.site-footer {
+  padding: 42px 21px;
+  background: #000; }
+
+.social-networks {
+  text-align: center; }
+
+.social-network {
+  display: inline-block; }
+  .social-network .i {
+    font-size: 44px; }
+
+.social-network__link {
+  color: #fff; }

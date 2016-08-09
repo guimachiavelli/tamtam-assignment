@@ -265,3 +265,33 @@ a {
   font-size: 15px;
   font-weight: 300;
   text-align: center; }
+
+.feed {
+  background: url(../imgs/feed-bg.jpg) no-repeat top center;
+  background-size: auto 100%;
+  padding: 59.5px 22px; }
+
+.feed__header {
+  margin-bottom: 28px; }
+
+.feed__cta {
+  font-size: 20px;
+  color: #789199;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 14px; }
+
+.feed__link {
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-weight: 300; }
+
+.pic {
+  margin-bottom: 21px; }
+
+.pic__caption {
+  background: #fff;
+  padding: 14px 21px;
+  font-size: 15px;
+  color: #76797f; }

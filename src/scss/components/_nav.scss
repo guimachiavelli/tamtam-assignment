@@ -1,0 +1,45 @@
+.site-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.site-nav__items {
+    position: fixed;
+    top: 60px;
+    border-top: 2px solid #fff;
+    bottom: 0;
+    background: black;
+    width: 100%;
+    padding-top: baselines(6);
+
+    transform: translateY(-200%);
+}
+
+.site-nav__toggle {
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: 0;
+    background: none;
+    font-size: 44px;
+    color: #fff;
+    line-height: 60px;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 0;
+
+    &:focus + .site-nav__items {
+        transform: translateY(0);
+    }
+}
+
+.nav-item {
+    width: 100%;
+    text-align: center;
+    height: baselines(12);
+}
+
+.nav-item__link {
+    color: #fff;
+    font-size: font-size(h3);
+}

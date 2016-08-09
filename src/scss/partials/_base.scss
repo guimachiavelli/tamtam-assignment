@@ -1,0 +1,29 @@
+body {
+    font-family: $main-font;
+    font-size: font-size(regular);
+    line-height: baselines(3);
+    min-width: breakpoint(mobile);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: colour(black);
+    text-decoration: none;
+
+    &:hover {
+        color: colour(red);
+    }
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}

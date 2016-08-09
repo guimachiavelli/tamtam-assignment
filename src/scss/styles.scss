@@ -1,2 +1,9 @@
-body {
-}
+@import '../../node_modules/node-reset-scss/scss/_reset.scss';
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,900';
+
+@import 'partials/icons';
+@import 'partials/vars';
+@import 'partials/base';
+
+@import 'components/header';
+@import 'components/nav';

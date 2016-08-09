@@ -11,7 +11,7 @@ BROWSERIFY_DEPS=$(wildcard $(JS_SRC)/main.js $(JS_SRC)/*.js $(JS_SRC)/**/*.js)
 
 SASS_DIR=$(SRC_DIR)/scss
 CSS_DIR=$(PUBLIC_DIR)/assets/css
-SASS_DEPS=$(wildcard $(SASS_DIR)/styles.scss $(SASS_DIR)/*.scss)
+SASS_DEPS=$(wildcard $(SASS_DIR)/styles.scss $(SASS_DIR)/**/*.scss)
 
 server:
 	@ruby -run -e httpd ./public -p 8000

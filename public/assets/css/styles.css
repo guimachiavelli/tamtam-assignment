@@ -1,0 +1,183 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,900';
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'tamtam-icons';
+  src: url("../icons/tamtam-icons.ttf?a224b9") format("truetype"), url("../icons/tamtam-icons.woff?a224b9") format("woff"), url("../icons/tamtam-icons.svg?a224b9#tamtam-icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'tamtam-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.i--arrow_down_scroll:before {
+  content: "\e900"; }
+
+.i--arrow_down:before {
+  content: "\e901"; }
+
+.i--arrow_left:before {
+  content: "\e902"; }
+
+.i--arrow_right:before {
+  content: "\e903"; }
+
+.i--check:before {
+  content: "\e904"; }
+
+.i--close:before {
+  content: "\e905"; }
+
+.i--error:before {
+  content: "\e906"; }
+
+.i--facebook:before {
+  content: "\e907"; }
+
+.i--instagram:before {
+  content: "\e908"; }
+
+.i--logo:before {
+  content: "\e909"; }
+
+.i--menu:before {
+  content: "\e90a"; }
+
+.i--mouse:before {
+  content: "\e90b"; }
+
+.i--twitter:before {
+  content: "\e90c"; }
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 21px;
+  min-width: 320px; }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+  a:hover {
+    color: #fd5454; }
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.site-header {
+  background: #000;
+  width: 100%;
+  height: 60px; }
+
+.site-header__logo {
+  color: #fff;
+  width: 100%;
+  text-align: center; }
+  .site-header__logo .i {
+    line-height: 60px;
+    vertical-align: middle;
+    font-size: 40px; }
+
+.site-nav {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.site-nav__items {
+  position: fixed;
+  top: 60px;
+  border-top: 2px solid #fff;
+  bottom: 0;
+  background: black;
+  width: 100%;
+  padding-top: 42px;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%); }
+
+.site-nav__toggle {
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: 0;
+  background: none;
+  font-size: 44px;
+  color: #fff;
+  line-height: 60px;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 0; }
+  .site-nav__toggle:focus + .site-nav__items {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+
+.nav-item {
+  width: 100%;
+  text-align: center;
+  height: 84px; }
+
+.nav-item__link {
+  color: #fff;
+  font-size: 30px; }

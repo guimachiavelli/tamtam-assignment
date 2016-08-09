@@ -1,0 +1,77 @@
+$main-font: 'Lato', Helvetica, Arial, sans-serif;
+
+$baseline: 7px;
+$base-font-size: 5px;
+
+$font-sizes: (
+    small: $base-font-size * 3,
+    regular: $base-font-size * 4,
+    h1: $base-font-size * 10,
+    h2: $base-font-size * 8,
+    h3: $base-font-size * 6,
+    small-alt: $base-font-size * 3.5,
+    regular-alt: $base-font-size * 4.75
+);
+
+$colours: (
+    black: #000,
+    red: #fd5454,
+    green: #7bdb4c,
+    petrol: #789199,
+    grey: #555d60,
+    lightgrey: #8e8e8e
+);
+
+$breakpoints: (
+    mobile: 320px,
+    tablet: 768px,
+    desktop: 1024px,
+    desktop-hd: 1440px
+);
+
+@function baselines($lines) {
+    @return $lines * $baseline;
+}
+
+@function font-size($size) {
+    @return map-get($font-sizes, $size);
+}
+
+@function colour($colour) {
+    @return map-get($colours, $colour);
+}
+
+@function breakpoint($breakpoint) {
+    @return map-get($breakpoints, $breakpoint);
+}
+
+@mixin animation($animation) {
+    -ms-animation: $animation;
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-ms-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+

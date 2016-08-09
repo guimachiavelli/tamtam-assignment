@@ -198,6 +198,8 @@ a {
   height: 100vh;
   position: relative;
   margin-bottom: 28px; }
+  .case:last-child {
+    margin-bottom: 0; }
 
 .case__info {
   position: absolute;
@@ -248,3 +250,18 @@ a {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: 40px; }
+
+.about {
+  padding: 59.5px 22px; }
+
+.about__title {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 28px;
+  margin-bottom: 17.5px;
+  text-align: center; }
+
+.about__content {
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center; }

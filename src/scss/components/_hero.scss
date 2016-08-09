@@ -10,6 +10,10 @@
     height: 100vh;
     position: relative;
     margin-bottom: baselines(4);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .case__info {

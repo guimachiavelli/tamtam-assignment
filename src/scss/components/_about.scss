@@ -1,0 +1,17 @@
+.about {
+    padding: baselines(8.5) 22px;
+}
+
+.about__title {
+    font-size: font-size(regular);
+    text-transform: uppercase;
+    line-height: baselines(4);
+    margin-bottom: baselines(2.5);
+    text-align: center;
+}
+
+.about__content {
+    font-size: font-size(small);
+    font-weight: 300;
+    text-align: center;
+}

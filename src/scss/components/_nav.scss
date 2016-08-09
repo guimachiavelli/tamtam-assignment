@@ -12,7 +12,6 @@
     background: black;
     width: 100%;
     padding-top: baselines(6);
-
     transform: translateY(-200%);
 }
 
@@ -23,7 +22,7 @@
     background: none;
     font-size: 44px;
     color: #fff;
-    line-height: 60px;
+    line-height: $header-height;
     vertical-align: middle;
     cursor: pointer;
     padding: 0;

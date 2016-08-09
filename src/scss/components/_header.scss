@@ -1,7 +1,9 @@
+$header-height: baselines(8.5);
+
 .site-header {
     background: colour(black);
     width: 100%;
-    height: 60px;
+    height: $header-height;
 }
 
 .site-header__logo {
@@ -10,7 +12,7 @@
     text-align: center;
 
     .i {
-        line-height: 60px;
+        line-height: $header-height;
         vertical-align: middle;
         font-size: 40px;
     }

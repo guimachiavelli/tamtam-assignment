@@ -65,7 +65,7 @@ table {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.i--arrow_down_scroll:before {
+.i--scroll:before {
   content: "\e900"; }
 
 .i--arrow_down:before {
@@ -104,6 +104,14 @@ table {
 .i--twitter:before {
   content: "\e90c"; }
 
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
 body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -131,14 +139,14 @@ a {
 .site-header {
   background: #000;
   width: 100%;
-  height: 60px; }
+  height: 59.5px; }
 
 .site-header__logo {
   color: #fff;
   width: 100%;
   text-align: center; }
   .site-header__logo .i {
-    line-height: 60px;
+    line-height: 59.5px;
     vertical-align: middle;
     font-size: 40px; }
 
@@ -165,7 +173,7 @@ a {
   background: none;
   font-size: 44px;
   color: #fff;
-  line-height: 60px;
+  line-height: 59.5px;
   vertical-align: middle;
   cursor: pointer;
   padding: 0; }
@@ -181,3 +189,62 @@ a {
 .nav-item__link {
   color: #fff;
   font-size: 30px; }
+
+.hero {
+  margin-top: -59.5px;
+  padding-top: 59.5px; }
+
+.case {
+  height: 100vh;
+  position: relative;
+  margin-bottom: 28px; }
+
+.case__info {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%; }
+
+.case__title {
+  font-size: 30px;
+  margin-top: -42px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.case__link {
+  font-size: 15px;
+  color: #fff;
+  background: #000;
+  border-radius: 40px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  width: 150px;
+  display: block;
+  margin: 38.5px auto; }
+
+.case__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 45% 50%;
+     object-position: 45% 50%; }
+
+.hero__scroll-anchor {
+  background: #fff;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 40px; }

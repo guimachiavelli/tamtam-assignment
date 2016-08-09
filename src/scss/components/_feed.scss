@@ -1,0 +1,35 @@
+.feed {
+    background: url(../imgs/feed-bg.jpg) no-repeat top center;
+    background-size: auto 100%;
+    padding: baselines(8.5) 22px;
+}
+
+.feed__header {
+    margin-bottom: baselines(4);
+}
+
+.feed__cta {
+    font-size: font-size(regular);
+    color: colour(petrol);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: baselines(2);
+}
+
+.feed__link {
+    color: #fff;
+    text-align: center;
+    display: block;
+    font-weight: 300;
+}
+
+.pic {
+    margin-bottom: baselines(3);
+}
+
+.pic__caption {
+    background: #fff;
+    padding: baselines(2) baselines(3);
+    font-size: font-size(small);
+    color: colour(caption);
+}

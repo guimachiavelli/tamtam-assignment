@@ -118,6 +118,7 @@ body {
   font-size: 20px;
   line-height: 21px;
   min-width: 320px;
+  width: 100%;
   height: 100%;
   -webkit-tap-highlight-color: transparent; }
 
@@ -597,7 +598,6 @@ a {
 
 .form-message__icon {
   display: table-cell;
-  width: 40px;
   color: #fff;
   vertical-align: top; }
   .form-message__icon .i {
@@ -619,7 +619,9 @@ a {
   display: table-cell;
   font-size: 17.5px;
   color: #fff;
-  text-align: left; }
+  text-align: left;
+  width: 100%;
+  padding-left: 15px; }
 
 .contact-form__input-warning {
   background: #555d60;

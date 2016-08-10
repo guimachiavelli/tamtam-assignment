@@ -1,0 +1,113 @@
+$contact-padding: 10px;
+
+.contact {
+    background: url(../imgs/feed-bg.jpg) no-repeat top center;
+    background-size: cover;
+    padding: baselines(8.5) $contact-padding baselines(14) $contact-padding;
+}
+
+.contact-form__cta {
+    text-align: center;
+    color: #fff;
+    margin-bottom: baselines(4);
+    font-size: font-size(regular);
+    text-transform: uppercase;
+    line-height: baselines(4);
+}
+
+.contact-form__fieldset {
+    background: rgba(255,255,255,0.2);
+    padding: baselines(3) $contact-padding;;
+    margin: 0 ($contact-padding * -1) baselines(3) ($contact-padding * -1);
+}
+
+.contact-form__container {
+    display: block;
+    margin-bottom: baselines(1);
+}
+
+.contact-form__input {
+    font-family: $main-font;
+    border: 0;
+    background: #fff;
+    height: baselines(7);
+    width: 100%;
+    padding: baselines(3);
+    font-weight: 300;
+    font-size: font-size(small-alt);
+    border-radius: 0;
+}
+
+.contact-form__input--textarea {
+    height: baselines(17);
+    margin-top: baselines(2);
+}
+
+.contact-form__button {
+    background: colour(red);
+    border: 0;
+    border-radius: 40px;
+    height: 40px;
+    width: 150px;
+    font-size: font-size(small);
+    color: #fff;
+    line-height: baselines(3);
+    margin: 0 auto;
+    display: block;
+}
+
+.contact-form__warning {
+    background: rgba(0,0,0, 0.2);
+    display: table;
+    padding: baselines(3) $contact-padding;;
+    margin: 0 ($contact-padding * -1);
+}
+
+.contact-form__warning-icon {
+    display: table-cell;
+    width: 20%;
+    color: #fff;
+    vertical-align: top;
+
+    .i {
+        border-radius: 100%;
+        display: block;
+        background: rgba(0,0,0, 0.2);
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+    }
+}
+
+.contact-form__warning-message {
+    vertical-align: top;
+    display: table-cell;
+    width: 80%;
+    font-size: font-size(small-alt);
+    color: #fff;
+}
+
+.contact-form__input-warning {
+    background: colour(grey);
+    padding: baselines(1.5) baselines(3);
+    font-size: font-size(small);
+    color: #fff;
+    font-weight: 300;
+    position: relative;
+
+    &:before {
+        $height: 10px;
+        $proportion: 8px;
+
+        position: absolute;
+        top: $height * -1;
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: $proportion solid transparent;
+        border-right: $proportion solid transparent;
+        border-bottom: $height solid colour(grey);
+    }
+
+}

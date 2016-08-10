@@ -1,4 +1,12 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/*!
+ * Jump.js 1.0.1 - A small, modern, dependency-free smooth scrolling library.
+ * Copyright (c) 2016 Michael Cavalea - https://github.com/callmecavs/jump.js
+ * License: MIT
+ */
+
+!function(o,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):o.Jump=n()}(this,function(){"use strict";var o=function(o,n,e,t){return o/=t/2,o<1?e/2*o*o+n:(o--,-e/2*(o*(o-2)-1)+n)},n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(o){return typeof o}:function(o){return o&&"function"==typeof Symbol&&o.constructor===Symbol?"symbol":typeof o},e=function(){function e(){return window.scrollY||window.pageYOffset}function t(o){return o.getBoundingClientRect().top+d}function i(o){v||(v=o),b=o-v,p=s(b,d,y,m),window.scrollTo(0,p),b<m?requestAnimationFrame(i):r()}function r(){window.scrollTo(0,d+y),c&&l&&(c.setAttribute("tabindex","-1"),c.focus()),"function"==typeof w&&w(),v=!1}function u(r){var u=arguments.length<=1||void 0===arguments[1]?{}:arguments[1];switch(m=u.duration||1e3,a=u.offset||0,w=u.callback,s=u.easing||o,l=u.a11y||!1,d=e(),"undefined"==typeof r?"undefined":n(r)){case"number":c=void 0,l=!1,f=d+r;break;case"object":c=r,f=t(c);break;case"string":c=document.querySelector(r),f=t(c)}switch(y=f-d+a,n(u.duration)){case"number":m=u.duration;break;case"function":m=u.duration(y)}requestAnimationFrame(i)}var c=void 0,d=void 0,f=void 0,a=void 0,s=void 0,l=void 0,y=void 0,m=void 0,v=void 0,b=void 0,p=void 0,w=void 0;return u},t=e();return t});
+},{}],2:[function(require,module,exports){
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -855,17 +863,52 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
+'use strict';
+
+var jump = require('jump.js');
+
+var anchorScroll = {
+    init: function(el) {
+        this.el = el;
+        this.target = this.targetFromHREF(el.href);
+        this.bind();
+    },
+
+    bind: function() {
+        this.el.addEventListener('click', this.onAnchorClick.bind(this));
+    },
+
+    targetFromHREF: function(href) {
+        href = href.split('#');
+
+        return '#' + href[1];
+    },
+
+    onAnchorClick: function(event) {
+        var target;
+
+        event.preventDefault();
+
+        jump(this.target);
+    },
+};
+
+module.exports = anchorScroll;
+
+},{"jump.js":1}],4:[function(require,module,exports){
 'use strict';
 
 var slider = require('./slider'),
-    nav = require('./nav');
+    nav = require('./nav'),
+    anchorScroll = require('./anchor-scroll');
 
 var app = {
 
     init: function() {
         slider.init();
         nav.init(document.querySelector('.site-nav'));
+        anchorScroll.init(document.querySelector('.hero__scroll-anchor'));
     }
 
 };
@@ -873,7 +916,7 @@ var app = {
 app.init();
 
 
-},{"./nav":3,"./slider":4}],3:[function(require,module,exports){
+},{"./anchor-scroll":3,"./nav":5,"./slider":6}],5:[function(require,module,exports){
 'use strict';
 
 var nav = {
@@ -895,7 +938,7 @@ var nav = {
 
 module.exports = nav;
 
-},{}],4:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 var lory = require('lory.js').lory;
@@ -919,4 +962,4 @@ var slider = {
 
 module.exports = slider;
 
-},{"lory.js":1}]},{},[2]);
+},{"lory.js":2}]},{},[4]);

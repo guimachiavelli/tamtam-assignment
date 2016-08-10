@@ -32,3 +32,20 @@
         line-height: baselines(4);
     }
 }
+
+@media (min-width: breakpoint(desktop)) {
+    .about {
+        padding: baselines(14) 42px;
+    }
+
+    .about__content {
+        font-size: font-size(regular-alt);
+        line-height: baselines(5);
+    }
+}
+
+@media (min-width: breakpoint(desktop)) {
+    .about {
+        padding: baselines(14) 124px;
+    }
+}

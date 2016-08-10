@@ -60,3 +60,13 @@
          display: inline-block;
     }
 }
+
+@media (min-width: breakpoint(desktop)) {
+    .feed__header {
+        margin-bottom: baselines(7);
+    }
+
+    .pics__list {
+        columns: 3;
+    }
+}

@@ -146,3 +146,47 @@
         font-size: font-size(h2);
     }
 }
+
+@media (min-width: breakpoint(desktop)) {
+    .case__title {
+        font-size: font-size(h1);
+        line-height: 1;
+        margin-top: baselines(-16);
+    }
+
+    .case__link:hover {
+        background: colour(red);
+    }
+
+    .slider-nav__button:hover {
+        background: colour(red);
+    }
+
+    .hero__scroll-anchor {
+        height: 54px;
+        width: 54px;
+        position: absolute;
+        bottom: baselines(6);
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 50px;
+        line-height: 54px;
+        vertical-align: middle;
+
+        .i {
+            text-align: center;
+        }
+
+        .i:before {
+            content: "\e90b";
+            display: block;
+        }
+
+        .i:after {
+            display: block;
+            content: "\e901";
+            font-size: 40px;
+            color: #fff;
+        }
+    }
+}

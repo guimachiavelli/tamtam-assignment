@@ -1,5 +1,7 @@
 .about {
     padding: baselines(8.5) 22px;
+    max-width: 940px;
+    margin: 0 auto;
 }
 
 .about__title {
@@ -35,7 +37,7 @@
 
 @media (min-width: breakpoint(desktop)) {
     .about {
-        padding: baselines(14) 42px;
+        padding: baselines(12) 42px;
     }
 
     .about__content {
@@ -44,8 +46,9 @@
     }
 }
 
-@media (min-width: breakpoint(desktop)) {
+@media (min-width: breakpoint(desktop-hd)) {
     .about {
-        padding: baselines(14) 124px;
+        padding: baselines(14) 0;
     }
 }
+

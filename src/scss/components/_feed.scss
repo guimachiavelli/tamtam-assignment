@@ -24,6 +24,11 @@
     font-size: font-size(regular);
 }
 
+.pics {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
 .pic {
     margin-bottom: baselines(3);
 }
@@ -39,6 +44,7 @@
 @media (min-width: breakpoint(tablet)) {
     .feed {
         padding: baselines(12) 84px;
+        background-size: cover;
     }
 
     .feed__cta {
@@ -62,11 +68,22 @@
 }
 
 @media (min-width: breakpoint(desktop)) {
-    .feed__header {
-        margin-bottom: baselines(7);
+    .feed {
+        padding: baselines(12) 42px;
     }
 
     .pics__list {
         columns: 3;
+    }
+}
+
+
+@media (min-width: breakpoint(desktop-hd)) {
+    .feed {
+        padding: baselines(14) 42px;
+    }
+
+    .feed__header {
+        margin-bottom: baselines(7);
     }
 }

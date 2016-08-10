@@ -53,3 +53,35 @@
     color: #fff;
     font-size: font-size(h3);
 }
+
+@media (min-width: breakpoint(tablet)) {
+    .site-nav {
+        position: static;
+        display: inline;
+    }
+
+    .site-nav__toggle {
+        display: none;
+    }
+
+    .site-nav__items {
+        position: static;
+        display: inline;
+    }
+
+    .nav-item {
+        display: inline;
+        height: auto;
+        margin-right: 40px;
+    }
+
+    .nav-item__link {
+        font-size: font-size(small-alt);
+        font-weight: 400;
+        color: colour(lightgrey);
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}

@@ -21,6 +21,7 @@
     text-align: center;
     display: block;
     font-weight: 300;
+    font-size: font-size(regular);
 }
 
 .pic {
@@ -32,4 +33,30 @@
     padding: baselines(2) baselines(3);
     font-size: font-size(small);
     color: colour(caption);
+}
+
+
+@media (min-width: breakpoint(tablet)) {
+    .feed {
+        padding: baselines(12) 84px;
+    }
+
+    .feed__cta {
+        font-size: font-size(h3);
+        margin-bottom: baselines(3);
+    }
+
+    .feed__link {
+        font-size: font-size(h3);
+    }
+
+    .pics__list {
+        columns: 2;
+        column-fill: auto;
+    }
+
+    .pic {
+         break-inside: avoid;
+         display: inline-block;
+    }
 }

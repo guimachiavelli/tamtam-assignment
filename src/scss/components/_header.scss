@@ -17,3 +17,11 @@ $header-height: baselines(8.5);
         font-size: 40px;
     }
 }
+
+
+@media (min-width: breakpoint(tablet)) {
+    .site-header__logo {
+        display: inline;
+        width: auto;
+    }
+}

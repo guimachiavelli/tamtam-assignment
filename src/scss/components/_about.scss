@@ -15,3 +15,20 @@
     font-weight: 300;
     text-align: center;
 }
+
+@media (min-width: breakpoint(tablet)) {
+    .about {
+        padding: baselines(12) 84px;
+    }
+
+    .about__title {
+        font-size: font-size(h3);
+        line-height: baselines(6);
+        margin-bottom: baselines(4);
+    }
+
+    .about__content {
+        font-size: font-size(regular);
+        line-height: baselines(4);
+    }
+}

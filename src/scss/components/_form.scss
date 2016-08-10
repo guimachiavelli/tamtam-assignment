@@ -21,7 +21,7 @@ $contact-padding-tablet: 74px;
     line-height: baselines(4);
 }
 
-.contact-form__container {
+.contact-form__inputs {
     background: rgba(255,255,255,0.2);
     padding: baselines(3) $contact-padding;;
     margin: 0 ($contact-padding * -1) baselines(3) ($contact-padding * -1);
@@ -37,6 +37,12 @@ $contact-padding-tablet: 74px;
 .contact-form__label--textarea {
     top: baselines(2);
     margin-bottom: baselines(2);
+}
+
+.contact-form__label--invalid {
+    .contact-form__input-warning {
+        display: block;
+    }
 }
 
 .contact-form__label--valid {
@@ -89,6 +95,12 @@ $contact-padding-tablet: 74px;
     display: table;
     padding: baselines(3) $contact-padding;;
     margin: 0 ($contact-padding * -1);
+    display: none;
+}
+
+.form-message__error,
+.form-message__success {
+    display: none;
 }
 
 .form-message__icon {
@@ -103,18 +115,6 @@ $contact-padding-tablet: 74px;
         width: 30px;
         height: 30px;
         font-size: 30px;
-    }
-}
-
-.form-message--error {
-    .i:before {
-        content: '\e906';
-    }
-}
-
-.form-message--success {
-    .i:before {
-        content: '\e904';
     }
 }
 
@@ -136,6 +136,7 @@ $contact-padding-tablet: 74px;
     font-weight: 300;
     position: relative;
     vertical-align: middle;
+    display: none;
 
     &:before {
         $height: 10px;
@@ -153,6 +154,21 @@ $contact-padding-tablet: 74px;
     }
 
 }
+
+.contact-form--invalid {
+    .form-message,
+    .form-message__error {
+        display: block;
+    }
+}
+
+.contact-form--valid {
+    .form-message,
+    .form-message__success {
+        display: block;
+    }
+}
+
 
 @media (min-width: breakpoint(tablet)) {
     .contact {
@@ -172,7 +188,7 @@ $contact-padding-tablet: 74px;
          width: 50%;
     }
 
-    .contact-form__container {
+    .contact-form__inputs {
         margin: 0 0 baselines(6) 0;
     }
 

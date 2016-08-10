@@ -12,7 +12,18 @@
     background: black;
     width: 100%;
     padding-top: baselines(6);
-    transform: translateY(-200%);
+    display: none;
+    z-index: 1;
+}
+
+.site-nav--visible {
+    .site-nav__items {
+        display: block;
+    }
+
+    .i:before {
+        content: "\e905";
+    }
 }
 
 .site-nav__toggle {
@@ -27,8 +38,8 @@
     cursor: pointer;
     padding: 0;
 
-    &:focus + .site-nav__items {
-        transform: translateY(0);
+    &:focus {
+        outline: 0;
     }
 }
 

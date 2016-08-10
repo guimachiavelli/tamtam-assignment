@@ -1,12 +1,13 @@
 'use strict';
 
-var slider = require('./slider');
+var slider = require('./slider'),
+    nav = require('./nav');
 
 var app = {
 
     init: function() {
-        console.log('app init');
         slider.init();
+        nav.init(document.querySelector('.site-nav'));
     }
 
 };

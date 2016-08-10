@@ -536,7 +536,7 @@ a {
   text-transform: uppercase;
   line-height: 28px; }
 
-.contact-form__container {
+.contact-form__inputs {
   background: rgba(255, 255, 255, 0.2);
   padding: 21px 10px;
   margin: 0 -10px 21px -10px; }
@@ -550,6 +550,9 @@ a {
 .contact-form__label--textarea {
   top: 14px;
   margin-bottom: 14px; }
+
+.contact-form__label--invalid .contact-form__input-warning {
+  display: block; }
 
 .contact-form__label--valid:after {
   font-family: 'tamtam-icons';
@@ -594,7 +597,12 @@ a {
   background: rgba(0, 0, 0, 0.2);
   display: table;
   padding: 21px 10px;
-  margin: 0 -10px; }
+  margin: 0 -10px;
+  display: none; }
+
+.form-message__error,
+.form-message__success {
+  display: none; }
 
 .form-message__icon {
   display: table-cell;
@@ -607,12 +615,6 @@ a {
     width: 30px;
     height: 30px;
     font-size: 30px; }
-
-.form-message--error .i:before {
-  content: '\e906'; }
-
-.form-message--success .i:before {
-  content: '\e904'; }
 
 .form-message__text {
   vertical-align: middle;
@@ -630,7 +632,8 @@ a {
   color: #fff;
   font-weight: 300;
   position: relative;
-  vertical-align: middle; }
+  vertical-align: middle;
+  display: none; }
   .contact-form__input-warning:before {
     position: absolute;
     top: -10px;
@@ -641,6 +644,14 @@ a {
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 10px solid #555d60; }
+
+.contact-form--invalid .form-message,
+.contact-form--invalid .form-message__error {
+  display: block; }
+
+.contact-form--valid .form-message,
+.contact-form--valid .form-message__success {
+  display: block; }
 
 @media (min-width: 768px) {
   .contact {
@@ -654,7 +665,7 @@ a {
     float: left;
     padding-right: 10px;
     width: 50%; }
-  .contact-form__container {
+  .contact-form__inputs {
     margin: 0 0 42px 0; }
   .form-message {
     margin: 0;

@@ -93,7 +93,6 @@ $contact-padding-tablet: 74px;
 
 .form-message__icon {
     display: table-cell;
-    width: 40px;
     color: #fff;
     vertical-align: top;
 
@@ -125,6 +124,8 @@ $contact-padding-tablet: 74px;
     font-size: font-size(small-alt);
     color: #fff;
     text-align: left;
+    width: 100%;
+    padding-left: 15px;
 }
 
 .contact-form__input-warning {

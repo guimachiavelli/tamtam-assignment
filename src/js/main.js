@@ -11,7 +11,7 @@ var app = {
         slider.init();
         nav.init(document.querySelector('.site-nav'));
         anchorScroll.init(document.querySelector('.hero__scroll-anchor'));
-        feed.init();
+        feed.init(document.querySelector('.pics'));
     }
 
 };

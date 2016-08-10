@@ -8,11 +8,18 @@ config = {
 };
 
 feed = {
-    init: function() {
+    init: function(el) {
         var request, URL;
+
+        if (!el) {
+            return;
+        }
+
         URL = config.endpoint + '?access_token=' + config.accessToken;
         URL += '&count=' + config.count;
         URL += '&callback=onFeedFetchSuccess';
+
+        this.el = el;
 
         this.requestJSONP(URL);
     },
@@ -62,7 +69,7 @@ feed = {
     },
 
     render: function(el) {
-        document.querySelector('.pics').appendChild(el);
+        this.el.appendChild(el);
     },
 
     parsedData: function(data) {

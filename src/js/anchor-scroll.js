@@ -4,6 +4,10 @@ var jump = require('jump.js');
 
 var anchorScroll = {
     init: function(el) {
+        if (!el) {
+            return;
+        }
+
         this.el = el;
         this.target = this.targetFromHREF(el.href);
         this.bind();

@@ -9,7 +9,6 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-
 }
 
 .cases {
@@ -35,14 +34,18 @@
     z-index: 1;
     transform: translateY(-50%);
     width: 100%;
+    height: 40px;
 }
 
 .case__title {
     font-size: font-size(h3);
-    margin-top: baselines(-9);
+    top: -30px - baselines(5); //line-height + 5 baselines
+    position: absolute;
+    width: 100%;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 .case__link {
@@ -56,7 +59,7 @@
     text-align: center;
     width: 150px;
     display: block;
-    margin: baselines(5.5)  auto;
+    margin: 0 auto;
 }
 
 .case__figure {
@@ -106,17 +109,15 @@
 }
 
 .hero__slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 40px;
 }
 
 .slider-nav {
-    width: 250px;
+    width: 270px;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: (270px/2) * -1;
 }
 
 .slider-nav__button {
@@ -130,9 +131,15 @@
     padding: 0;
     cursor: pointer;
     position: absolute;
+    //XXX: magic number
+    top: 9px;
 
     .i {
         font-size: 40px;
+    }
+
+    &:focus {
+        outline: 0;
     }
 }
 
@@ -142,20 +149,31 @@
 
 
 @media (min-width: breakpoint(tablet)) {
+    .hero {
+        margin-top: $header-height-tablet * -1;
+        padding-top: $header-height-tablet;
+    }
+
+    .slider-nav__button {
+        //XXX magic number
+        top: 20px;
+    }
+
     .case__title {
         font-size: font-size(h2);
+        top: -40px - baselines(6);
     }
 }
 
 @media (min-width: breakpoint(desktop)) {
     .case__title {
         font-size: font-size(h1);
-        line-height: 1;
-        margin-top: baselines(-16);
+        top: -50px - baselines(7);
     }
 
     .case__link:hover {
         background: colour(red);
+        color: #fff;
     }
 
     .slider-nav__button:hover {
@@ -166,7 +184,7 @@
         height: 54px;
         width: 54px;
         position: absolute;
-        bottom: baselines(6);
+        bottom: baselines(5);
         left: 50%;
         transform: translateX(-50%);
         font-size: 50px;

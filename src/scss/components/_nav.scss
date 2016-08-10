@@ -1,12 +1,13 @@
 .site-nav {
     position: absolute;
     top: 0;
-    left: 0;
+    left: $header-padding;
 }
 
 .site-nav__items {
     position: fixed;
     top: 60px;
+    left: 0;
     border-top: 2px solid #fff;
     bottom: 0;
     background: black;
@@ -37,6 +38,8 @@
     vertical-align: middle;
     cursor: pointer;
     padding: 0;
+    //XXX: magic number due to the padding around the icon file
+    margin-left: -10px;
 
     &:focus {
         outline: 0;
@@ -64,9 +67,12 @@
         display: none;
     }
 
+    .site-nav--visible .site-nav__items,
     .site-nav__items {
         position: static;
         display: inline;
+        border-top: 0;
+        padding-top: 0;
     }
 
     .nav-item {

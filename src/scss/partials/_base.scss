@@ -15,6 +15,7 @@ body {
     line-height: baselines(3);
     min-width: breakpoint(mobile);
     height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 img {
@@ -39,3 +40,12 @@ a {
     width: 1px;
     overflow: hidden;
 }
+
+@media (max-width: breakpoint(tablet)) {
+    .has-open-menu {
+        overflow: hidden;
+        position: fixed;
+    }
+}
+
+

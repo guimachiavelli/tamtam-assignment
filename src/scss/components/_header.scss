@@ -1,9 +1,13 @@
 $header-height: baselines(8.5);
+$header-height-tablet: baselines(11.5);
+$header-padding: 20px;
+$header-padding-tablet: 30px;
 
 .site-header {
     background: colour(black);
     width: 100%;
     height: $header-height;
+    padding-left: $header-padding;
 }
 
 .site-header__logo {
@@ -14,14 +18,24 @@ $header-height: baselines(8.5);
     .i {
         line-height: $header-height;
         vertical-align: middle;
-        font-size: 40px;
+        font-size: 32px;
     }
 }
 
-
 @media (min-width: breakpoint(tablet)) {
+    .site-header {
+        height: $header-height-tablet;
+        padding-left: $header-padding-tablet;
+    }
+
     .site-header__logo {
         display: inline;
         width: auto;
+        margin-right: 30px;
+
+        .i {
+            font-size: 40px;
+            line-height: $header-height-tablet;
+        }
     }
 }

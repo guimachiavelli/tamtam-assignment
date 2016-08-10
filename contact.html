@@ -41,54 +41,58 @@
                         We would love to hear from you
                     </h2>
 
-                    <div class="contact-form__warning">
-                        <div class="contact-form__warning-icon">
-                            <i class="i i--error"></i>
+                    <div class="form-message form-message--error">
+                        <div class="form-message__icon">
+                            <i class="i"></i>
                         </div>
-                        <p class="contact-form__warning-message">
+                        <p class="form-message__text">
                             Please complete the form and try again.
                         </p>
                     </div>
 
-                    <fieldset class="contact-form__fieldset">
-                        <label class="contact-form__container">
-                            <input class="contact-form__input" 
-                                   name="first-name"
-                                   type="text" 
-                                   required
-                                   placeholder="First name">
-                            <p class="contact-form__input-warning">
-                                We need your first name.
-                            </p>
-                        </label>
+                    <div class="contact-form__container">
+                        <fieldset class="contact-form__fieldset contact-form__fieldset--name">
+                            <label class="contact-form__label contact-form__label--valid">
+                                <input class="contact-form__input"
+                                       name="first-name"
+                                       type="text" 
+                                       required
+                                       placeholder="First name">
+                                <p class="contact-form__input-warning">
+                                    We need your first name.
+                                </p>
+                            </label>
 
-                        <label class="contact-form__container">
-                            <input class="contact-form__input" 
-                                   type="text" 
-                                   name="last-name"
-                                   required
-                                   placeholder="Last name">
-                        </label>
+                            <label class="contact-form__label">
+                                <input class="contact-form__input" 
+                                       type="text" 
+                                       name="last-name"
+                                       required
+                                       placeholder="Last name">
+                            </label>
+                        </fieldset>
 
-                        <label class="contact-form__container">
-                            <input class="contact-form__input" 
-                                   type="email" 
-                                   name="email"
-                                   required
-                                   placeholder="Your e-mail address">
-                        </label>
+                        <fieldset class="contact-form__fieldset contact-form__fieldset--contact">
+                            <label class="contact-form__label">
+                                <input class="contact-form__input" 
+                                       type="email" 
+                                       name="email"
+                                       required
+                                       placeholder="Your e-mail address">
+                            </label>
 
-                        <label class="contact-form__container">
-                            <input class="contact-form__input" 
-                                   type="tel"
-                                   name="phone-number"
-                                   placeholder="Your phone number (optional)">
-                        </label>
+                            <label class="contact-form__label">
+                                <input class="contact-form__input" 
+                                       type="tel"
+                                       name="phone-number"
+                                       placeholder="Your phone number (optional)">
+                            </label>
+                        </fieldset>
 
-                        <label class="contact-form__container">
+                        <label class="contact-form__label contact-form__label--textarea contact-form__label--valid">
                             <textarea class="contact-form__input contact-form__input--textarea" required name="message" placeholder="Your message…"></textarea>
                         </label>
-                    </fieldset>
+                    </div>
 
                     <button class="contact-form__button" type="submit">
                         Send

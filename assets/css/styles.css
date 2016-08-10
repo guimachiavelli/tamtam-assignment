@@ -165,8 +165,14 @@ a {
   background: black;
   width: 100%;
   padding-top: 42px;
-  -webkit-transform: translateY(-200%);
-          transform: translateY(-200%); }
+  display: none;
+  z-index: 1; }
+
+.site-nav--visible .site-nav__items {
+  display: block; }
+
+.site-nav--visible .i:before {
+  content: "\e905"; }
 
 .site-nav__toggle {
   -webkit-appearance: none;
@@ -179,9 +185,8 @@ a {
   vertical-align: middle;
   cursor: pointer;
   padding: 0; }
-  .site-nav__toggle:focus + .site-nav__items {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
+  .site-nav__toggle:focus {
+    outline: 0; }
 
 .nav-item {
   width: 100%;

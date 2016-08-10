@@ -858,13 +858,14 @@ return /******/ (function(modules) { // webpackBootstrap
 },{}],2:[function(require,module,exports){
 'use strict';
 
-var slider = require('./slider');
+var slider = require('./slider'),
+    nav = require('./nav');
 
 var app = {
 
     init: function() {
-        console.log('app init');
         slider.init();
+        nav.init(document.querySelector('.site-nav'));
     }
 
 };
@@ -872,7 +873,29 @@ var app = {
 app.init();
 
 
-},{"./slider":3}],3:[function(require,module,exports){
+},{"./nav":3,"./slider":4}],3:[function(require,module,exports){
+'use strict';
+
+var nav = {
+    init: function(el) {
+        this.el = el;
+        this.button = el.querySelector('.site-nav__toggle');
+        this.menu = el.querySelector('.site-nav__items');
+        this.bind();
+    },
+
+    bind: function() {
+        this.button.addEventListener('click', this.toggle.bind(this));
+    },
+
+    toggle: function() {
+        this.el.classList.toggle('site-nav--visible');
+    }
+};
+
+module.exports = nav;
+
+},{}],4:[function(require,module,exports){
 'use strict';
 
 var lory = require('lory.js').lory;

@@ -870,6 +870,10 @@ var jump = require('jump.js');
 
 var anchorScroll = {
     init: function(el) {
+        if (!el) {
+            return;
+        }
+
         this.el = el;
         this.target = this.targetFromHREF(el.href);
         this.bind();
@@ -907,11 +911,18 @@ config = {
 };
 
 feed = {
-    init: function() {
+    init: function(el) {
         var request, URL;
+
+        if (!el) {
+            return;
+        }
+
         URL = config.endpoint + '?access_token=' + config.accessToken;
         URL += '&count=' + config.count;
         URL += '&callback=onFeedFetchSuccess';
+
+        this.el = el;
 
         this.requestJSONP(URL);
     },
@@ -961,7 +972,7 @@ feed = {
     },
 
     render: function(el) {
-        document.querySelector('.pics').appendChild(el);
+        this.el.appendChild(el);
     },
 
     parsedData: function(data) {
@@ -1054,7 +1065,7 @@ var app = {
         slider.init();
         nav.init(document.querySelector('.site-nav'));
         anchorScroll.init(document.querySelector('.hero__scroll-anchor'));
-        feed.init();
+        feed.init(document.querySelector('.pics'));
     }
 
 };
@@ -1091,10 +1102,14 @@ module.exports = nav;
 var lory = require('lory.js').lory;
 
 var slider = {
-    init: function() {
-        var el = document.querySelector('.hero'),
-            frame = document.querySelector('.hero__slider');
+    init: function(el) {
+        var frame;
 
+        if (!el) {
+            return;
+        }
+
+        frame = el.querySelector('.hero__slider');
         frame.className += ' hero__slider--active';
 
         lory(el, {

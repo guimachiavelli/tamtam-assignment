@@ -518,6 +518,99 @@ a {
   .feed__header {
     margin-bottom: 49px; } }
 
+.contact {
+  background: url(../imgs/feed-bg.jpg) no-repeat top center;
+  background-size: cover;
+  padding: 59.5px 10px 98px 10px; }
+
+.contact-form__cta {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 28px;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 28px; }
+
+.contact-form__fieldset {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 21px 10px;
+  margin: 0 -10px 21px -10px; }
+
+.contact-form__container {
+  display: block;
+  margin-bottom: 7px; }
+
+.contact-form__input {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  border: 0;
+  background: #fff;
+  height: 49px;
+  width: 100%;
+  padding: 21px;
+  font-weight: 300;
+  font-size: 17.5px;
+  border-radius: 0; }
+
+.contact-form__input--textarea {
+  height: 119px;
+  margin-top: 14px; }
+
+.contact-form__button {
+  background: #fd5454;
+  border: 0;
+  border-radius: 40px;
+  height: 40px;
+  width: 150px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 21px;
+  margin: 0 auto;
+  display: block; }
+
+.contact-form__warning {
+  background: rgba(0, 0, 0, 0.2);
+  display: table;
+  padding: 21px 10px;
+  margin: 0 -10px; }
+
+.contact-form__warning-icon {
+  display: table-cell;
+  width: 20%;
+  color: #fff;
+  vertical-align: top; }
+  .contact-form__warning-icon .i {
+    border-radius: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0.2);
+    width: 30px;
+    height: 30px;
+    font-size: 30px; }
+
+.contact-form__warning-message {
+  vertical-align: top;
+  display: table-cell;
+  width: 80%;
+  font-size: 17.5px;
+  color: #fff; }
+
+.contact-form__input-warning {
+  background: #555d60;
+  padding: 10.5px 21px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 300;
+  position: relative; }
+  .contact-form__input-warning:before {
+    position: absolute;
+    top: -10px;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #555d60; }
+
 .site-footer {
   padding: 42px 21px;
   background: #000; }

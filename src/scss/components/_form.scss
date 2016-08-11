@@ -68,10 +68,11 @@ $contact-padding-tablet: 74px;
     background: #fff;
     height: baselines(7);
     width: 100%;
-    padding: baselines(3);
+    padding: baselines(2) baselines(3);
     font-weight: 300;
     font-size: font-size(small-alt);
     border-radius: 0;
+    display: block;
 }
 
 .contact-form__input--textarea {
@@ -89,6 +90,12 @@ $contact-padding-tablet: 74px;
     line-height: baselines(3);
     margin: 0 auto;
     display: block;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        background: colour(red-alt);
+    }
 }
 
 .form-message {

@@ -1,5 +1,5 @@
 .feed {
-    background: url(../imgs/feed-bg.jpg) no-repeat top center;
+    background: url(../imgs/feed-bg_2048.jpg) no-repeat top center;
     background-size: auto 100%;
     padding: baselines(8.5) 22px;
 }
@@ -69,6 +69,7 @@
 @media (min-width: breakpoint(desktop)) {
     .feed {
         padding: baselines(12) 42px;
+        background-image: url(../imgs/feed-bg_2880.jpg);
     }
 
     .pics__list {
@@ -79,6 +80,7 @@
 @media (min-width: breakpoint(desktop-hd)) {
     .feed {
         padding: baselines(14) 42px;
+        background-image: url(../imgs/feed-bg.jpg);
     }
 
     .feed__header {

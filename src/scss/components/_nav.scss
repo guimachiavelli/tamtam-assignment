@@ -85,9 +85,9 @@
         font-size: font-size(small-alt);
         font-weight: 400;
         color: colour(lightgrey);
+    }
 
-        &:hover {
-            color: #fff;
-        }
+    .nav-item--active .nav-item__link {
+        color: #fff;
     }
 }

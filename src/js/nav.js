@@ -20,6 +20,16 @@ var nav = {
     hide: function() {
         this.el.classList.remove('site-nav--visible');
         document.body.classList.remove('has-open-menu');
+    },
+
+    activateItem: function(item) {
+        var currentActive = document.querySelector('.nav-item--active');
+
+        if (currentActive) {
+            currentActive.classList.remove('nav-item--active');
+        }
+
+        item.classList.add('nav-item--active');
     }
 };
 

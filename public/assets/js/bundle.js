@@ -1905,6 +1905,7 @@ var app = {
 
     home: function() {
         this.load('home', function() {
+            nav.activateItem(document.querySelector('.nav-item--home'));
             slider.init(document.querySelector('.hero'));
             anchorScroll.init(document.querySelector('.hero__scroll-anchor'));
             feed.init(document.querySelector('.pics'));
@@ -1913,6 +1914,7 @@ var app = {
 
     contact: function() {
         this.load('contact', function() {
+            nav.activateItem(document.querySelector('.nav-item--contact'));
             form.init(document.querySelector('.contact-form'), 'contact-form');
         });
     },
@@ -1976,6 +1978,16 @@ var nav = {
     hide: function() {
         this.el.classList.remove('site-nav--visible');
         document.body.classList.remove('has-open-menu');
+    },
+
+    activateItem: function(item) {
+        var currentActive = document.querySelector('.nav-item--active');
+
+        if (currentActive) {
+            currentActive.classList.remove('nav-item--active');
+        }
+
+        item.classList.add('nav-item--active');
     }
 };
 

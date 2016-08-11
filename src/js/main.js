@@ -27,6 +27,7 @@ var app = {
 
     home: function() {
         this.load('home', function() {
+            nav.activateItem(document.querySelector('.nav-item--home'));
             slider.init(document.querySelector('.hero'));
             anchorScroll.init(document.querySelector('.hero__scroll-anchor'));
             feed.init(document.querySelector('.pics'));
@@ -35,6 +36,7 @@ var app = {
 
     contact: function() {
         this.load('contact', function() {
+            nav.activateItem(document.querySelector('.nav-item--contact'));
             form.init(document.querySelector('.contact-form'), 'contact-form');
         });
     },

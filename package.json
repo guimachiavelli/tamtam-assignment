@@ -6,6 +6,7 @@
   "author": "gui machiavelli",
   "license": "ISC",
   "dependencies": {
+    "director": "^1.2.8",
     "jump.js": "^1.0.1",
     "lory.js": "^2.1.0",
     "node-reset-scss": "^1.0.1",

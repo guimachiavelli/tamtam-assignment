@@ -119,8 +119,28 @@ body {
   line-height: 21px;
   min-width: 320px;
   width: 100%;
-  height: 100%;
-  -webkit-tap-highlight-color: transparent; }
+  min-height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.site-content {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 img {
   display: block;
@@ -243,12 +263,24 @@ a {
       color: #fff; } }
 
 .site-section--full {
-  height: 100%; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .hero {
   margin-top: -59.5px;
   padding-top: 59.5px;
-  height: 100%; }
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .hero__slider {
   position: relative;
@@ -522,7 +554,10 @@ a {
 .contact {
   background: url(../imgs/feed-bg.jpg) no-repeat top center;
   background-size: cover;
-  padding: 59.5px 10px 98px 10px; }
+  padding: 59.5px 10px 98px 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .contact-form {
   max-width: 620px;
@@ -680,7 +715,8 @@ a {
 
 .site-footer {
   padding: 42px 21px;
-  background: #000; }
+  background: #000;
+  margin-top: auto; }
 
 .social-networks {
   text-align: center; }

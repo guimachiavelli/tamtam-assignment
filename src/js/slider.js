@@ -13,6 +13,8 @@ var slider = {
         frame = el.querySelector('.hero__slider');
         frame.className += ' hero__slider--active';
 
+        el.style.height = window.innerHeight + 'px';
+
         lory(el, {
             infinite: 1,
             classNameFrame: 'hero__slider',

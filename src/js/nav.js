@@ -15,6 +15,11 @@ var nav = {
     toggle: function() {
         this.el.classList.toggle('site-nav--visible');
         document.body.classList.toggle('has-open-menu');
+    },
+
+    hide: function() {
+        this.el.classList.remove('site-nav--visible');
+        document.body.classList.remove('has-open-menu');
     }
 };
 

@@ -630,6 +630,14 @@ a {
   font-size: 17.5px;
   border-radius: 0;
   display: block; }
+  .contact-form__input:focus {
+    outline: 0; }
+    .contact-form__input:focus::-webkit-input-placeholder {
+      color: #000; }
+    .contact-form__input:focus::-moz-placeholder {
+      color: #000; }
+    .contact-form__input:focus:-ms-input-placeholder {
+      color: #000; }
 
 .contact-form__input--textarea {
   height: 119px;

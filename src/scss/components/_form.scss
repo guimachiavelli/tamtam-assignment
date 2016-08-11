@@ -72,6 +72,22 @@ $contact-padding-tablet: 74px;
     font-size: font-size(small-alt);
     border-radius: 0;
     display: block;
+
+    &:focus {
+        outline: 0;
+
+        &::-webkit-input-placeholder {
+           color: colour(black);
+        }
+
+        &::-moz-placeholder {
+           color: colour(black);
+        }
+
+        &:-ms-input-placeholder {
+           color: colour(black);
+        }
+    }
 }
 
 .contact-form__input--textarea {

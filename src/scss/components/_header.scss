@@ -22,6 +22,11 @@ $header-padding-tablet: 30px;
     }
 }
 
+.is-loading .site-header__logo .i {
+    display: inline-block;
+     @include animation(loading 500ms ease infinite);
+}
+
 @media (min-width: breakpoint(tablet)) {
     .site-header {
         height: $header-height-tablet;
@@ -37,5 +42,15 @@ $header-padding-tablet: 30px;
             font-size: 40px;
             line-height: $header-height-tablet;
         }
+    }
+}
+
+@include keyframes(loading) {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
     }
 }

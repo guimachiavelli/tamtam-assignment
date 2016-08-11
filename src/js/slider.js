@@ -10,6 +10,9 @@ var slider = {
             return;
         }
 
+        this.el = el;
+        this.lastScroll = Date.now();
+
         frame = el.querySelector('.hero__slider');
         frame.className += ' hero__slider--active';
 
@@ -22,6 +25,21 @@ var slider = {
             classNamePrevCtrl: 'slider-nav__button--previous ',
             classNameNextCtrl: 'slider-nav__button--next '
         });
+    },
+
+    bind: function() {
+        window.addEventListener('resize', this.onResize.bind(this));
+    },
+
+    onResize: function(event) {
+        var current = Date.now();
+
+        if (current - this.lastResize < 100) {
+            return;
+        }
+
+        this.lastResize = current;
+        this.el.style.height = window.innerHeight + 'px';
     }
 };
 

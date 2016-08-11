@@ -141,6 +141,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .site-content:empty {
+    background: #555d60; }
 
 img {
   display: block;
@@ -180,6 +182,11 @@ a {
     vertical-align: middle;
     font-size: 32px; }
 
+.is-loading .site-header__logo .i {
+  display: inline-block;
+  -webkit-animation: loading 500ms ease infinite;
+  animation: loading 500ms ease infinite; }
+
 @media (min-width: 768px) {
   .site-header {
     height: 80.5px;
@@ -191,6 +198,22 @@ a {
     .site-header__logo .i {
       font-size: 40px;
       line-height: 80.5px; } }
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0); }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg); } }
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0); }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg); } }
 
 .site-nav {
   position: absolute;

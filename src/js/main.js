@@ -8,7 +8,6 @@ var slider = require('./slider'),
     form = require('./form'),
     anchorScroll = require('./anchor-scroll');
 
-
 var app = {
 
     init: function() {
@@ -22,7 +21,7 @@ var app = {
         nav.init(document.querySelector('.site-nav'));
 
         router = director.Router(routes);
-        router.init();
+        router.init('/');
     },
 
 
@@ -48,6 +47,9 @@ var app = {
         request.open('GET', './' + page + '.html');
         request.onload = this.onLoadSuccess.bind(this, request, callback);
 
+        document.body.classList.add('is-loading');
+        document.querySelector('.site-content').innerHTML = '';
+
         request.send();
         nav.hide();
     },
@@ -62,6 +64,7 @@ var app = {
         fragment.innerHTML = request.responseText;
         fragment = fragment.querySelector('.site-content');
 
+        document.body.classList.remove('is-loading');
         document.querySelector('.site-content').innerHTML = fragment.innerHTML;
         callback();
     }

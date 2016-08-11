@@ -26,6 +26,10 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+
+    &:empty {
+        background: colour(grey);
+    }
 }
 
 img {

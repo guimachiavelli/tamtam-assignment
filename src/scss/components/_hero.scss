@@ -132,7 +132,7 @@
     cursor: pointer;
     position: absolute;
     //XXX: magic number
-    top: 9px;
+    top: 10px;
 
     .i {
         font-size: 40px;
@@ -146,7 +146,6 @@
 .slider-nav__button--next {
     right: 0;
 }
-
 
 @media (min-width: breakpoint(tablet)) {
     .hero {

@@ -38,7 +38,7 @@ var form = {
             return;
         }
 
-        this.onSuccess();
+        this.onSuccess(event.target);
     },
 
     onError: function(fields, errors) {
@@ -64,11 +64,38 @@ var form = {
         this.el.classList.add('contact-form--invalid');
     },
 
-    onSuccess: function() {
+    onSuccess: function(form) {
+        this.submit(this.formData(form));
+
         this.el.classList.remove('contact-form--invalid');
         this.el.classList.add('contact-form--valid');
-
         this.el.removeChild(this.el.querySelector('.contact-form__container'));
+    },
+
+    formData: function(form) {
+        var field, len, data, i;
+
+        if (form.nodeName !== "FORM") {
+            return null;
+        }
+
+        data = {};
+
+        for (i = 0, len = form.elements.length; i < len; i += 1) {
+            field = form.elements[i];
+
+            if (!field.name || field.disabled || field.type === 'button') {
+                continue;
+            }
+
+            data[field.name] = field.value;
+        }
+
+        return data;
+    },
+
+    submit: function(data) {
+        console.log('form submitted', data);
     }
 
 };

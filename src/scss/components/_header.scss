@@ -1,13 +1,13 @@
 $header-height: baselines(8.5);
 $header-height-tablet: baselines(11.5);
 $header-padding: 20px;
-$header-padding-tablet: 30px;
+$header-padding-tablet: 23px;
 
 .site-header {
     background: colour(black);
     width: 100%;
     height: $header-height;
-    padding-left: $header-padding;
+    padding: 0 $header-padding;
     position: relative;
     z-index: 1;
 }
@@ -38,10 +38,10 @@ $header-padding-tablet: 30px;
     .site-header__logo {
         display: inline;
         width: auto;
-        margin-right: 30px;
+        margin-right: 27px;
 
         .i {
-            font-size: 40px;
+            font-size: 47px;
             line-height: $header-height-tablet;
         }
     }

@@ -5,7 +5,6 @@ $contact-padding-tablet: 74px;
     background: url(../imgs/feed-bg.jpg) no-repeat top center;
     background-size: cover;
     padding: baselines(8.5) $contact-padding baselines(14) $contact-padding;
-    flex: 1;
 }
 
 .contact-form {
@@ -77,6 +76,7 @@ $contact-padding-tablet: 74px;
 
 .contact-form__input--textarea {
     height: baselines(17);
+    overflow: auto;
 }
 
 .contact-form__button {
@@ -194,6 +194,10 @@ $contact-padding-tablet: 74px;
          float: left;
          padding-right: 10px;
          width: 50%;
+    }
+
+    .contact-form__fieldset--contact {
+        padding-right: 0;
     }
 
     .contact-form__inputs {

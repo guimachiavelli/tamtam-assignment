@@ -32,14 +32,14 @@
     border-radius: 0;
     border: 0;
     background: none;
-    font-size: 44px;
+    font-size: 50px;
     color: #fff;
-    line-height: $header-height;
+    line-height: 64px;
     vertical-align: middle;
     cursor: pointer;
     padding: 0;
     //XXX: magic number due to the padding around the icon file
-    margin-left: -10px;
+    margin-left: -13px;
 
     &:focus {
         outline: 0;
@@ -78,7 +78,7 @@
     .nav-item {
         display: inline;
         height: auto;
-        margin-right: 40px;
+        margin-right: 37px;
     }
 
     .nav-item__link {
